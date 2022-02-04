@@ -7,6 +7,7 @@ function SearchBar(props) {
 	const [searchText, setSearchtext] = useState('');
 
 	function searchTextChange(event) {
+		// Stores the search text in searchtext, any chance occurs in search input field
 		setSearchtext(event.target.value);
 	}
 

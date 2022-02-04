@@ -14,6 +14,9 @@ function Courses(props) {
 	));
 
 	const listHandler = (keyword) => {
+		// Handles the search operation
+		// all courses will be available if search is empty
+		// otherwise the searched text course will be shown
 		setList(
 			keyword === ''
 				? mockedCoursesList

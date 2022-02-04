@@ -22,10 +22,13 @@ function CreateCourse(props) {
 	});
 
 	const createAuthorChange = (event) => {
+		// Any change in author input will be stored in createAuthor
 		setCreateAuthor(event.target.value);
 	};
 
 	const createAuthorHandler = () => {
+		// Handles validation of author input and update authorsList
+		// as well as mockedAuthorsList to have it always
 		if (createAuthor.length < 2) {
 			alert('Please enter atleast 2 characters...');
 			return;
@@ -45,6 +48,9 @@ function CreateCourse(props) {
 	};
 
 	const addAuthorHandler = (authorId, authorName) => {
+		// updates addAuthors to show in course authors with the data and
+		// also updates authorList. So that added author will not be available
+		//  in the authors list. Also triigers a function to store the data in formDetails
 		setAddAuthors([
 			...addAuthors,
 			{
@@ -57,6 +63,7 @@ function CreateCourse(props) {
 	};
 
 	const addAuthorsToFormDetails = (authorId) => {
+		// updates formDetails with authorsId
 		let authorsId = [];
 		authorsList.forEach((author) => {
 			if (author.id === authorId) {
@@ -67,6 +74,8 @@ function CreateCourse(props) {
 	};
 
 	const deleteAuthorHandler = (authorId, authorName) => {
+		// Updates authorsList to show authors in author list
+		// and also removes the authors in course authors
 		setAuthorsList([
 			...authorsList,
 			{
@@ -78,6 +87,8 @@ function CreateCourse(props) {
 	};
 
 	const durationHandler = (event) => {
+		// Handles duration changes and convert mins to HrsMins format
+		// Also updates the formDetails with neccessary data
 		const today = new Date().toISOString().slice(0, 10);
 		const hours = convertMinsToHrsMins(event.target.value);
 		setCalculateDuration(hours);
@@ -90,7 +101,7 @@ function CreateCourse(props) {
 	};
 
 	const submitHandler = () => {
-		console.log(formDetails);
+		// Alerts if any detail misses otherwise adds to courseList
 		if (
 			formDetails.creationDate !== '' &&
 			formDetails.description !== '' &&

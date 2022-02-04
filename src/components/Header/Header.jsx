@@ -5,6 +5,7 @@ import { constantVariables } from '../../constants';
 import './Header.css';
 
 function Header() {
+	// Returning header with a logo and logout button with a username
 	return (
 		<div className='header'>
 			<nav className='navbar navbar-expand-lg navbar-light'>
