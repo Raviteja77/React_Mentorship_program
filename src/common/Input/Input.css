@@ -1,0 +1,8 @@
+
+input[type='text'] {
+    border: 2px solid #E5AE78;
+}
+
+.label-input {
+    flex: 0.8;
+}

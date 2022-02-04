@@ -1,0 +1,11 @@
+
+.header {
+    border: 2px solid #E8A695;
+    margin: 1rem;
+}
+
+.username {
+    position: relative;
+    top: 0.5rem;
+    right: 2rem;
+}
