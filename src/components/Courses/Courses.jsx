@@ -6,7 +6,7 @@ import { mockedCoursesList } from '../../constants';
 import { constantVariables } from '../../constants';
 import './Courses.css';
 
-function Courses(props) {
+function Courses({ clickHandler }) {
 	const [list, setList] = useState(mockedCoursesList);
 
 	const listOfCourses = list.map((course) => (
@@ -20,7 +20,7 @@ function Courses(props) {
 		setList(
 			keyword === ''
 				? mockedCoursesList
-				: list.filter(
+				: mockedCoursesList.filter(
 						(course) =>
 							course.title.toLowerCase().includes(keyword.toLowerCase()) ||
 							course.id.toLowerCase().includes(keyword.toLowerCase())
@@ -38,7 +38,7 @@ function Courses(props) {
 					<Button
 						buttonText={constantVariables.ADD_NEW_COURSE}
 						className='btn btn-outline-primary'
-						clickHandler={props.clickHandler}
+						clickHandler={clickHandler}
 					/>
 				</div>
 			</div>

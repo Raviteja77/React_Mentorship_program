@@ -59,6 +59,7 @@ const mockedAuthorsList = [
 
 const constantVariables = {
 	TEXT_TYPE: 'text',
+	NUMBER_TYPE: 'number',
 	BUTTON_TYPE: 'button',
 	COURSE_NAME_PLACEHOLDER: 'Enter course name...',
 	TITLE_PLACEHOLDER: 'Enter title...',

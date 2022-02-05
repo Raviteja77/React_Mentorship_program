@@ -1,5 +1,5 @@
 
-input[type='text'] {
+input[type='text'], input[type='number'] {
     border: 2px solid #E5AE78;
 }
 

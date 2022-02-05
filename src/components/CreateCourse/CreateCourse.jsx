@@ -7,7 +7,7 @@ import { constantVariables } from '../../constants';
 import { convertMinsToHrsMins } from '../../helpers/pipeDuration';
 import './CreateCourse.css';
 
-function CreateCourse(props) {
+function CreateCourse({ clickHandler }) {
 	const [addAuthors, setAddAuthors] = useState([]);
 	const [authorsList, setAuthorsList] = useState(mockedAuthorsList);
 	const [createAuthor, setCreateAuthor] = useState('');
@@ -114,7 +114,7 @@ function CreateCourse(props) {
 				`New course ${formDetails.title.toUpperCase()} created successfully`
 			);
 			mockedCoursesList.push(formDetails);
-			props.clickHandler();
+			clickHandler();
 		} else {
 			alert('Please, fill all details');
 		}
@@ -191,7 +191,7 @@ function CreateCourse(props) {
 					<div className='col-6'>
 						<strong>Duration</strong>
 						<Input
-							typeText={constantVariables.TEXT_TYPE}
+							typeText={constantVariables.NUMBER_TYPE}
 							labelText={constantVariables.LABEL_DURATION}
 							placeholderText={constantVariables.DURATION_PLACEHOLDER}
 							changeHandler={durationHandler}

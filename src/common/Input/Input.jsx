@@ -1,25 +1,25 @@
 import React from 'react';
 import './Input.css';
 
-const Input = (props) => {
+const Input = ({ changeHandler, labelText, placeholderText, typeText }) => {
 	// Returning input with label tag and without label tag
 	// can be used based on condition
-	return props.labelText ? (
+	return labelText ? (
 		<div className='label-input'>
-			<label htmlFor={props.labelText}>{props.labelText}</label>
+			<label htmlFor={labelText}>{labelText}</label>
 			<input
-				type={props.typeText}
+				type={typeText}
 				className='form-control me-2'
-				placeholder={props.placeholderText}
-				onChange={props.changeHandler}
+				placeholder={placeholderText}
+				onChange={changeHandler}
 			/>
 		</div>
 	) : (
 		<input
-			type={props.typeText}
+			type={typeText}
 			className='form-control me-2'
-			placeholder={props.placeholderText}
-			onChange={props.changeHandler}
+			placeholder={placeholderText}
+			onChange={changeHandler}
 		/>
 	);
 };

@@ -3,7 +3,7 @@ import Input from '../../../../common/Input/Input';
 import Button from '../../../../common/Button/Button';
 import { constantVariables } from '../../../../constants';
 
-function SearchBar(props) {
+function SearchBar({ clickHandler }) {
 	const [searchText, setSearchtext] = useState('');
 
 	function searchTextChange(event) {
@@ -24,7 +24,7 @@ function SearchBar(props) {
 				<Button
 					buttonText={constantVariables.SEARCH}
 					className='btn btn-outline-dark'
-					clickHandler={() => props.clickHandler(searchText)}
+					clickHandler={() => clickHandler(searchText)}
 				/>
 			</div>
 		</div>
