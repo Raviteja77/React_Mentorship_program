@@ -108,7 +108,8 @@ function CreateCourse({ clickHandler }) {
 			formDetails.duration !== '' &&
 			formDetails.id !== '' &&
 			formDetails.title !== '' &&
-			formDetails.authors.length !== 0
+			formDetails.authors.length !== 0 &&
+			formDetails.description.length >= 2
 		) {
 			alert(
 				`New course ${formDetails.title.toUpperCase()} created successfully`
@@ -147,6 +148,7 @@ function CreateCourse({ clickHandler }) {
 					name='description'
 					className='description__text'
 					cols='160'
+					minLength={2}
 					rows='5'
 					onChange={(event) =>
 						setFormDetails({ ...formDetails, description: event.target.value })
