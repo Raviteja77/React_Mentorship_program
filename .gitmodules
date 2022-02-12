@@ -1,3 +1,9 @@
 [submodule "Task1"]
 	path = Task1
 	url = https://github.com/Raviteja77/React_Task1.git
+[submodule "courses-app-backend"]
+	path = courses-app-backend
+	url = https://git.epam.com/Yevhenii_Dubrovskyi/courses-app-backend.git
+[submodule "Task2"]
+	path = Task2
+	url = https://github.com/Raviteja77/React_Task2.git
