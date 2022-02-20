@@ -10,3 +10,6 @@
 [submodule "HomeTask2"]
 	path = HomeTask2
 	url = https://github.com/Raviteja77/React_Task_2.git
+[submodule "Task3"]
+	path = Task3
+	url = https://github.com/Raviteja77/React_Task_3.git
