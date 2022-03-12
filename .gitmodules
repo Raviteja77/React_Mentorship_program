@@ -16,3 +16,6 @@
 [submodule "Task4"]
 	path = Task4
 	url = https://github.com/Raviteja77/React_Task4.git
+[submodule "Task5"]
+	path = Task5
+	url = https://github.com/Raviteja77/React_Task5.git
